@@ -1,0 +1,3 @@
+type ListScreenProps = {
+    style?: object
+}
