@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {SearchBar} from "react-native-elements";
 import {SearchBarProps} from "../Types";
 import {searchCharacterAction, setNextPageAction} from "../../Redux/charactersDuck";
@@ -14,7 +14,7 @@ const Search = ({keySearch, setKeySearch, filter, setFirstUpdate, searchCharacte
     }
 
     const searchKey = (): void => {
-        if (keySearch.length >= 2) {
+        if (keySearch.length > 2) {
             setFirstUpdate(true)
             switch (type) {
                 case "Characters":

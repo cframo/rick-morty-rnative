@@ -4,9 +4,10 @@ import {ListItem} from "react-native-elements";
 // @ts-ignore
 import TouchableScale from 'react-native-touchable-scale';
 
-//Styles
-import {GeneralCardCharacters as STYLE} from "../../Styles";
 import { GeneralEpisodeProps} from "../../Types";
+
+//Styles
+import {GeneralCardCharacters as STYLE, CardGeneralStyles as GENERALSTYLE} from "../../Styles";
 
 export default function GeneralCard({episode, setEpisode, setVisible}: GeneralEpisodeProps): JSX.Element {
 
@@ -19,7 +20,7 @@ export default function GeneralCard({episode, setEpisode, setVisible}: GeneralEp
         <ListItem Component={TouchableScale} friction={100} tension={100} activeScale={0.95}
                   containerStyle={STYLE.listItem} onPress={showOverlay}>
             <ListItem.Content>
-                <ListItem.Title style={{fontWeight: "bold"}}>
+                <ListItem.Title style={GENERALSTYLE.font}>
                     {episode.name}
                 </ListItem.Title>
                 <ListItem.Subtitle>

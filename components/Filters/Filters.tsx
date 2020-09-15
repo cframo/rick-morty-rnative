@@ -17,7 +17,7 @@ function Filters({
 
     const changeFilterHandler = (filter: boolean) => {
         setFilter(filter);
-        if (keySearch.length >= 3) {
+        if (keySearch.length > 2) {
             switch (type) {
 
                 case "Characters":

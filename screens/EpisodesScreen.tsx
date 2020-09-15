@@ -43,7 +43,7 @@ function EpisodesScreen(props: any): JSX.Element {
     }
 
     const conditionalUpdatePage = (): void => {
-        if (keySearch.length >= 3) {
+        if (keySearch.length > 2) {
             updatePageAction(false, true, keySearch, filter);
             setFirstUpdate(false);
         } else {
@@ -51,7 +51,7 @@ function EpisodesScreen(props: any): JSX.Element {
         }
     }
 
-    if (loading && episodes.length === 0){
+    if (loading && episodes.length === 0) {
         return (
             <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
                 <ActivityIndicator size={"large"}/>
@@ -59,7 +59,7 @@ function EpisodesScreen(props: any): JSX.Element {
         );
     }
 
-    if(error){
+    if (error) {
         <Error/>
     }
 
@@ -67,7 +67,8 @@ function EpisodesScreen(props: any): JSX.Element {
         <View style={STYLE.container}>
             <View style={STYLE.body}>
                 <View style={STYLE.header}>
-                    <Search keySearch={keySearch} setKeySearch={setKeySearch} filter={filter} setFirstUpdate={setFirstUpdate} type={"Episodes"} />
+                    <Search keySearch={keySearch} setKeySearch={setKeySearch} filter={filter}
+                            setFirstUpdate={setFirstUpdate} type={"Episodes"}/>
                     <Filters btnNames={btnNames} filter={filter} setFilter={setFilter} keySearch={keySearch}
                              setKeySearch={setKeySearch} setFirstUpdate={setFirstUpdate} type={"Episodes"}/>
                 </View>

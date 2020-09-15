@@ -6,7 +6,7 @@ import TouchableScale from 'react-native-touchable-scale';
 import {GeneralCardLocationProps} from "../../Types";
 
 //Styles
-import {GeneralCardCharacters as STYLE} from "../../Styles";
+import {GeneralCardCharacters as STYLE, CardGeneralStyles as GENERALSTYLE} from "../../Styles";
 
 export default function GeneralCard({location, setLocation, setVisible}: GeneralCardLocationProps): JSX.Element {
 
@@ -19,7 +19,7 @@ export default function GeneralCard({location, setLocation, setVisible}: General
         <ListItem Component={TouchableScale} friction={100} tension={100} activeScale={0.95}
                   containerStyle={STYLE.listItem} onPress={showOverlay}>
             <ListItem.Content>
-                <ListItem.Title style={{fontWeight: "bold"}}>
+                <ListItem.Title style={GENERALSTYLE.font}>
                     {location.name}
                 </ListItem.Title>
                 <ListItem.Subtitle>

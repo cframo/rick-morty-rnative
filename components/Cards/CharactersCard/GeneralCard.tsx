@@ -5,7 +5,7 @@ import {Avatar, ListItem} from "react-native-elements";
 import TouchableScale from 'react-native-touchable-scale';
 
 //Styles
-import {GeneralCardCharacters as STYLE} from "../../Styles";
+import {GeneralCardCharacters as STYLE, CardGeneralStyles as GENERALSTYLE} from "../../Styles";
 import {GeneralCardProps} from "../../Types";
 
 export default function GeneralCard({character, setCharacter, setVisible}: GeneralCardProps): JSX.Element {
@@ -20,7 +20,7 @@ export default function GeneralCard({character, setCharacter, setVisible}: Gener
                   containerStyle={STYLE.listItem} onPress={showOverlay}>
             <Avatar rounded source={{uri: character.image}} size={"large"}/>
             <ListItem.Content>
-                <ListItem.Title style={{fontWeight: "bold"}}>
+                <ListItem.Title style={GENERALSTYLE.font}>
                     {character.name}
                 </ListItem.Title>
                 <ListItem.Subtitle>

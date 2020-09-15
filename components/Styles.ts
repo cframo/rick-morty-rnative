@@ -29,8 +29,39 @@ export const DetailedCardCharacters = StyleSheet.create({
     detail: {
         flexDirection: "row",
         marginBottom: "4%"
-    }
+    },
+
 })
+
+export const CardGeneralStyles = StyleSheet.create({
+    image: {
+        width: "100%",
+        marginBottom: "6%"
+    },
+    font: {
+        fontWeight: "bold"
+    },
+    font100:{
+        fontWeight: "100"
+    },
+    textMuted: {
+        fontWeight: "100",
+        color: "gray"
+    },
+    background: {
+        backgroundColor: 'gray'
+    },
+    dividerMargin2: {
+        backgroundColor: 'gray',
+        marginBottom: "2%"
+    },
+    dividerMargin6: {
+        backgroundColor: 'gray',
+        marginBottom: "6%"
+    }
+
+
+});
 
 export const CharacterScreen = StyleSheet.create({
     container: {

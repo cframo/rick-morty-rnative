@@ -43,7 +43,7 @@ function CharactersScreen(props: any): JSX.Element {
     }
 
     const conditionalUpdatePage = (): void => {
-        if (keySearch.length >= 3) {
+        if (keySearch.length > 2) {
             updatePageAction(false, true, keySearch, filter);
             setFirstUpdate(false);
         } else {
