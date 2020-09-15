@@ -21,31 +21,31 @@ Simple Wiki with information of characters, locations and episodes from "Rick & 
 | Genre      |           |            |
 
 ### Welcome Screen
-![Characters' page](https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/welcome.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/welcome.jpg" width="200">
 
 ### Characters' Page
 
 #### Principal Screen
-![Characters' page](https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/characters1.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/characters1.jpg" width="200">
 
 #### Detailed Screen
-![Characters' detailed](https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/characters2.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/characters2.jpg" width="200">
 
 ### Locations' Page
 
 #### Principal Screen
-![Locations' page](https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/locations1.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/locations1.jpg" width="200">
 
 #### Detailed Screen
-![Locations' detailed](https://github.com/cframo/rick-morty-app/blob/master/screenshots/locations2.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/locations2.jpg" width="200">
 
 ### Episodes' Page
 
 #### Principal Screen
-![Episodes' page](https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/episodes1.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/episodes1.jpg" width="200">
 
 #### Detailed Screen
-![Episodes' detailed](https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/episodes2.jpg)
+<img src="https://github.com/cframo/rick-morty-rnative/blob/master/screenshots/episodes2.jpg" width="200">
 
 ### Demo Videos
 
