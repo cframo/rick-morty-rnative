@@ -201,11 +201,6 @@ export const getLocationsAction = (updatePage?: boolean, refreshAll?: boolean, p
                     });
                 }
 
-                if (updatePage)
-                    dispatch({
-                        type: UPDATE_PAGE_LOCATIONS,
-                        payload: data.locations.info.next ? data.locations.info.next : 1
-                    });
             }
         }).catch(e => {
             dispatch({

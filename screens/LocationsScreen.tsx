@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import {ActivityIndicator, FlatList, View} from "react-native";
 import Search from "../components/Search/Search";
 import ListScreen from "../components/ListScreen/ListScreen";
-import GeneralCard from "../components/Cards/LocationsCard/GeneralCard";
+import GeneralCard from "../components/Cards/GeneralCard";
 import {searchLocationAction, updatePageAction} from "../Redux/locationsDuck";
-import DetailedCard from "../components/Cards/LocationsCard/DetailedCard";
+import DetailedCard from "../components/Cards/DetailedCard";
 import Filters from "../components/Filters/Filters";
 
 import {IEpisode, ILocation} from "../components/Types";
@@ -74,7 +74,7 @@ function LocationsScreen(props: any): JSX.Element {
                 </View>
                 <ListScreen style={STYLE.content}>
                     <FlatList data={locations} style={{width: "95%"}} renderItem={({item}) => {
-                        return <GeneralCard location={item} setLocation={setLocation} setVisible={setVisible}/>
+                        return <GeneralCard type={"location"} location={item} setLocation={setLocation} setVisible={setVisible}/>
                     }} keyExtractor={item => item.id} onEndReachedThreshold={0.5}
                               onEndReached={conditionalUpdatePage}>
                     </FlatList>

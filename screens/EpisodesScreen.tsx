@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import {ActivityIndicator, FlatList, View} from "react-native";
 import Search from "../components/Search/Search";
 import ListScreen from "../components/ListScreen/ListScreen";
-import GeneralCard from "../components/Cards/EpisodesCard/GeneralCard";
+import GeneralCard from "../components/Cards/GeneralCard";
 import {updatePageAction} from "../Redux/episodesDuck";
-import DetailedCard from "../components/Cards/EpisodesCard/DetailedCard";
+import DetailedCard from "../components/Cards/DetailedCard";
 import Filters from "../components/Filters/Filters";
 
 import {IEpisode} from "../components/Types";
@@ -74,7 +74,7 @@ function EpisodesScreen(props: any): JSX.Element {
                 </View>
                 <ListScreen style={STYLE.content}>
                     <FlatList data={episodes} style={{width: "95%"}} renderItem={({item}) => {
-                        return <GeneralCard episode={item} setEpisode={setEpisode} setVisible={setVisible}/>
+                        return <GeneralCard type={"episode"} episode={item} setEpisode={setEpisode} setVisible={setVisible}/>
                     }} keyExtractor={item => item.id} onEndReachedThreshold={0.5}
                               onEndReached={conditionalUpdatePage}>
                     </FlatList>

@@ -1,4 +1,5 @@
-interface ICharacter {
+export interface ICharacter {
+    __typename?: string;
     name: string;
     image: string;
     species: string;
@@ -6,13 +7,14 @@ interface ICharacter {
     gender: string;
 }
 
-interface ICharacterEpisodeLocation {
+export interface ICharacterEpisodeLocation {
     id: number;
     name: string;
     image: string;
 }
 
 export interface IEpisode {
+    __typename?: string;
     id: number;
     name: string;
     air_date: string;
@@ -21,6 +23,7 @@ export interface IEpisode {
 }
 
 export interface ILocation {
+    __typename?: string;
     id: number;
     name: string;
     air_date: string;
@@ -34,10 +37,14 @@ export type GeneralCardLocationProps = {
     setLocation: (location: ILocation) => void;
     setVisible: (visible: boolean) => void;
 }
-
 export type GeneralCardProps = {
-    character: ICharacter;
-    setCharacter: (character: ICharacter) => void;
+    type: string;
+    character?: ICharacter;
+    location?: ILocation;
+    episode?: IEpisode;
+    setCharacter?: (character: ICharacter) => void;
+    setEpisode?: (episode: IEpisode) => void;
+    setLocation?: (location: ILocation) => void;
     setVisible: (visible: boolean) => void;
 }
 
@@ -48,20 +55,15 @@ export type GeneralEpisodeProps = {
 
 }
 
-export type DetailedCardCharacter = {
+export type DetailedCardCharacterProps = {
     character: ICharacter,
     visible: boolean,
     setIsVisible: (visible: boolean) => void
 }
 
-export type DetailedCardEpisode = {
-    episode: IEpisode;
-    visible: boolean;
-    setIsVisible: (visible: boolean) => void;
-}
-
-export type DetailedCardLocation = {
-    location: ILocation,
+export type DetailedCardProps = {
+    episode?: IEpisode;
+    location?: ILocation;
     visible: boolean;
     setIsVisible: (visible: boolean) => void;
 }

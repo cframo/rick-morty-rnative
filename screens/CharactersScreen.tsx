@@ -3,17 +3,17 @@ import React, {useState} from "react";
 import {connect} from 'react-redux';
 
 import {ActivityIndicator, FlatList, View} from "react-native";
-import Search from "../../components/Search/Search";
-import ListScreen from "../../components/ListScreen/ListScreen";
-import GeneralCard from "../../components/Cards/CharactersCard/GeneralCard";
-import {updatePageAction} from "../../Redux/charactersDuck";
-import DetailedCard from "../../components/Cards/CharactersCard/DetailedCard";
-import Filters from "../../components/Filters/Filters";
+import Search from "../components/Search/Search";
+import ListScreen from "../components/ListScreen/ListScreen";
+import GeneralCard from "../components/Cards/GeneralCard";
+import {updatePageAction} from "../Redux/charactersDuck";
+import DetailedCard from "../components/Cards/DetailedCardCharacter";
+import Filters from "../components/Filters/Filters";
 
 //Style
-import {CharacterScreen as STYLE} from "../../components/Styles";
-import {ICharacter} from "../../Redux/types";
-import Error from "../Error";
+import {CharacterScreen as STYLE} from "../components/Styles";
+import {ICharacter} from "../components/Types"
+import Error from "./Error";
 
 function CharactersScreen(props: any): JSX.Element {
 
@@ -74,9 +74,9 @@ function CharactersScreen(props: any): JSX.Element {
                              setKeySearch={setKeySearch} setFirstUpdate={setFirstUpdate} type={"Characters"}/>
                 </View>
                 <ListScreen style={STYLE.content}>
-                    <FlatList data={characters} style={{width: "95%"}} renderItem={({item}) => {
-                        return <GeneralCard character={item} setCharacter={setCharacter} setVisible={setVisible}/>
-                    }} keyExtractor={item => item.id} onEndReachedThreshold={0.5}
+                    <FlatList data={characters} style={{width: "95%"}} renderItem={({item}) =>
+                        <GeneralCard type={"character"} character={item} setCharacter={setCharacter} setVisible={setVisible}/>
+                    } keyExtractor={item => item.id} onEndReachedThreshold={0.5}
                               onEndReached={conditionalUpdatePage}>
                     </FlatList>
                     {loading ? <ActivityIndicator style={{marginBottom: "4%"}} size={"large"}/> : null}

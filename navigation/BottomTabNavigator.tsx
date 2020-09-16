@@ -8,7 +8,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import {BottomTabParamList, TabOneParamList, TabTwoParamList} from '../types';
-import CharactersScreen from "../screens/CharactersScreen/CharactersScreen";
+import CharactersScreen from "../screens/CharactersScreen";
 import EpisodesScreen from "../screens/EpisodesScreen";
 import LocationsScreen from "../screens/LocationsScreen";
 

@@ -205,11 +205,6 @@ export const getCharactersAction = (updatePage?: boolean, refreshAll?: boolean, 
                     });
                 }
 
-                if (updatePage)
-                    dispatch({
-                        type: UPDATE_PAGE_CHARACTERS,
-                        payload: data.characters.info.next ? data.characters.info.next : 1
-                    });
             }
 
         }).catch(e => {

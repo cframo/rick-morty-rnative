@@ -121,10 +121,7 @@ export const searchEpisodeAction = (key: string, episode: boolean, refreshAll: b
                     }
                 });
             }
-            dispatch({
-                type: UPDATE_PAGE_EPISODES,
-                payload: data.episodes.info.next ? data.episodes.info.next : 1
-            });
+
         }
     }).catch(e => {
         dispatch({

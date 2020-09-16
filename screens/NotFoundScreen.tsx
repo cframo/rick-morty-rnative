@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { RootStackParamList } from '../types';
 
-export default function bnNotFoundScreen({
+export default function NotFoundScreen({
   navigation,
 }: StackScreenProps<RootStackParamList, 'NotFound'>) {
   return (

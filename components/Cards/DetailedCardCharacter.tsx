@@ -1,13 +1,13 @@
 import React from "react";
-import {DetailedCardCharacter} from "../../Types";
+import {DetailedCardCharacterProps as props} from "../Types";
 import {Button, Card, Divider, Overlay, Text} from "react-native-elements";
 import {View} from "react-native";
 
 
 //Style
-import {DetailedCardCharacters as STYLE, CardGeneralStyles as GENERALSTYLE} from '../../Styles';
+import {DetailedCardCharacters as STYLE, CardGeneralStyles as GENERALSTYLE} from '../Styles';
 
-export default function DetailedCard({character, visible, setIsVisible}: DetailedCardCharacter): JSX.Element {
+export default function DetailedCardCharacter({character, visible, setIsVisible}: props): JSX.Element {
     return (
         <Overlay isVisible={visible} onBackdropPress={() => setIsVisible(false)} overlayStyle={STYLE.overlay}>
             <Card containerStyle={STYLE.card}>
