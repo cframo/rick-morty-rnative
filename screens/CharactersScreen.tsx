@@ -7,7 +7,7 @@ import Search from "../components/Search/Search";
 import ListScreen from "../components/ListScreen/ListScreen";
 import GeneralCard from "../components/Cards/GeneralCard";
 import {updatePageAction} from "../Redux/charactersDuck";
-import DetailedCard from "../components/Cards/DetailedCardCharacter";
+import DetailedCard from "../components/Cards/DetailedCard";
 import Filters from "../components/Filters/Filters";
 
 //Style
@@ -38,7 +38,7 @@ function CharactersScreen(props: any): JSX.Element {
 
     const showDetailedCard = (): JSX.Element | null => {
         if (visible)
-            return <DetailedCard character={character} visible={visible} setIsVisible={setVisible}/>
+            return <DetailedCard type={'Character'} character={character} visible={visible} setIsVisible={setVisible}/>
         return null;
     }
 

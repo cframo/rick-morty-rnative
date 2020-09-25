@@ -38,7 +38,7 @@ function EpisodesScreen(props: any): JSX.Element {
 
     const showDetailedCard = (): JSX.Element | null => {
         if (visible)
-            return <DetailedCard episode={episode} visible={visible} setIsVisible={setVisible}/>
+            return <DetailedCard type={'Episode'} episode={episode} visible={visible} setIsVisible={setVisible}/>
         return null;
     }
 

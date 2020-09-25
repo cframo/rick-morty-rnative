@@ -6,7 +6,8 @@ import TouchableScale from 'react-native-touchable-scale';
 //Styles
 import {CardGeneralStyles as GENERALSTYLE, GeneralCardCharacters as STYLE} from "../Styles";
 
-export default function GeneralCard({type, character, location, episode, setCharacter, setEpisode, setLocation, setVisible}: props): JSX.Element {
+export default function GeneralCard({type, character, location, episode, setCharacter, setEpisode,
+                                        setLocation, setVisible}: props): JSX.Element {
 
     const showOverlay = (): void => {
         setVisible(true);

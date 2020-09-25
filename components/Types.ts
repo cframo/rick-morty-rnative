@@ -55,16 +55,27 @@ export type GeneralEpisodeProps = {
 
 }
 
-export type DetailedCardCharacterProps = {
-    character: ICharacter,
-    visible: boolean,
-    setIsVisible: (visible: boolean) => void
-}
-
 export type DetailedCardProps = {
+    type: string;
+    character?: ICharacter;
     episode?: IEpisode;
     location?: ILocation;
     visible: boolean;
+    setIsVisible: (visible: boolean) => void;
+}
+
+export type DetailedCardCharacterProps = {
+    character: ICharacter,
+    setIsVisible: (visible: boolean) => void
+}
+
+export type DetailedCardEpisodeProps = {
+    episode: IEpisode;
+    setIsVisible: (visible: boolean) => void;
+}
+
+export type DetailedCardLocationProps = {
+    location: ILocation;
     setIsVisible: (visible: boolean) => void;
 }
 

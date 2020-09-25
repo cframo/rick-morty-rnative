@@ -38,7 +38,7 @@ function LocationsScreen(props: any): JSX.Element {
 
     const showDetailedCard = (): JSX.Element | null => {
         if (visible)
-            return <DetailedCard location={location} visible={visible} setIsVisible={setVisible}/>
+            return <DetailedCard type={'Location'} location={location} visible={visible} setIsVisible={setVisible}/>
         return null;
     }
 
