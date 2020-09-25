@@ -24,12 +24,16 @@ function LocationsScreen(props: any): JSX.Element {
         error
     } = props;
 
+    const rgxLettersAndSpacesBeetWords = /^[a-zA-Z][a-zA-Z0-9]*(?: [a-zA-Z0-9]+)?$/;
+
     const [location, setLocation] = useState<ILocation>({});
     const [visible, setVisible] = useState<boolean>(false);
     const [keySearch, setKeySearch] = useState<string>('');
     const [filter, setFilter] = useState<boolean>(false)
     const [fisrtUpdate, setFirstUpdate] = useState<boolean>(true);
 
+    const validadteString = (value: string): boolean =>
+        value.length >= 3 && rgxLettersAndSpacesBeetWords.test(value);
 
     const btnNames = {
         first: "Name",
@@ -43,7 +47,7 @@ function LocationsScreen(props: any): JSX.Element {
     }
 
     const conditionalUpdatePage = (): void => {
-        if (keySearch.length >= 3) {
+        if (validadteString(keySearch)) {
             updatePageAction(false, true, keySearch, filter);
             setFirstUpdate(false);
         } else {

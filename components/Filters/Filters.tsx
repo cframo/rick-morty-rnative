@@ -15,11 +15,16 @@ function Filters({
                      searchEpisodeAction
                  }: FiltersProps): JSX.Element {
 
+    const rgxLettersAndSpacesBeetWords = /^[a-zA-Z][a-zA-Z0-9]*(?: [a-zA-Z0-9]+)?$/;
+    const rgxEmpty = /^$/;
+
+    const validadteString = (value: string): boolean =>
+        value.length >= 3 && rgxLettersAndSpacesBeetWords.test(value);
+
     const changeFilterHandler = (filter: boolean) => {
         setFilter(filter);
-        if (keySearch.length > 2) {
+        if (validadteString(keySearch)) {
             switch (type) {
-
                 case "Characters":
                     setNextPageAction(1);
                     searchCharacterAction ? searchCharacterAction(keySearch, filter, true) : null;

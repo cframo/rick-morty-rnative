@@ -8,13 +8,19 @@ import {connect} from "react-redux";
 
 const Search = ({keySearch, setKeySearch, filter, setFirstUpdate, searchCharacterAction, searchEpisodeAction, searchLocationAction, type}: SearchBarProps): JSX.Element => {
 
+    const rgxLettersAndSpacesBeetWords = /^[a-zA-Z][a-zA-Z0-9]*(?: [a-zA-Z0-9]+)?$/;
+    const rgxEmpty = /^$/;
+
+    const validadteString = (value: string): boolean =>
+        value.length >= 3 && rgxLettersAndSpacesBeetWords.test(value);
+
     const searchKeyHandler = (key: string) => {
         setKeySearch(key);
         searchKey();
     }
 
     const searchKey = (): void => {
-        if (keySearch.length > 2) {
+        if (validadteString(keySearch)) {
             setFirstUpdate(true)
             switch (type) {
                 case "Characters":
